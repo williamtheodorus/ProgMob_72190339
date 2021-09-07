@@ -7,7 +7,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.progmobkotlin2021"
+        applicationId "com.example.progmob_72190339"
         minSdk 21
         targetSdk 31
         versionCode 1

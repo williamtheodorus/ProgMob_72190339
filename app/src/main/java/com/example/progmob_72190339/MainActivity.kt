@@ -13,6 +13,11 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnInputNama : Button
     lateinit var btnHelp : Button
     lateinit var edInputNama : EditText
+    lateinit var btnLinear : Button
+    lateinit var btnCons : Button
+    lateinit var btnTab : Button
+    lateinit var btnPro : Button
+    lateinit var btnDut : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +29,11 @@ class MainActivity : AppCompatActivity() {
         btnInputNama = findViewById(R.id.btn_ambil_nama)
         btnHelp = findViewById(R.id.btn_help)
         edInputNama = findViewById(R.id.ed_input_nama)
+        btnLinear = findViewById(R.id.tes_linear)
+        btnCons = findViewById(R.id.btnConstraint)
+        btnTab = findViewById(R.id.btnTable)
+        btnPro= findViewById(R.id.btnProtein)
+        btnDut= findViewById(R.id.btnDutatani)
 
         btnInputNama.setOnClickListener(View.OnClickListener { view ->
             var strTmp = edInputNama.text.toString()
@@ -42,6 +52,31 @@ class MainActivity : AppCompatActivity() {
 
             var intent = Intent(this@MainActivity, HelpActivity::class.java)
             intent.putExtras(bundle)
+            startActivity(intent)
+        })
+
+        btnLinear.setOnClickListener(View.OnClickListener { view ->
+            var intent = Intent (this@MainActivity, LinearActivity::class.java)
+            startActivity(intent)
+        })
+
+        btnCons.setOnClickListener(View.OnClickListener { view ->
+            var intent = Intent (this@MainActivity, ConstraintActivity::class.java)
+            startActivity(intent)
+        })
+
+        btnTab.setOnClickListener(View.OnClickListener { view ->
+            var intent = Intent (this@MainActivity, TableActivity::class.java)
+            startActivity(intent)
+        })
+
+        btnPro.setOnClickListener(View.OnClickListener { view ->
+            var intent = Intent (this@MainActivity, ProteinTrackerActivity::class.java)
+            startActivity(intent)
+        })
+
+        btnDut.setOnClickListener(View.OnClickListener { view ->
+            var intent = Intent (this@MainActivity, DutaActivity::class.java)
             startActivity(intent)
         })
     }

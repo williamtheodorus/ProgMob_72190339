@@ -62,4 +62,72 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_ambil_nama"
         app:layout_constraintVertical_bias="0.318" />
 
+    <Button
+        android:id="@+id/tes_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="229dp"
+        android:layout_marginEnd="307dp"
+        android:layout_marginBottom="112dp"
+        android:text="Linear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_input_nama" />
+
+    <Button
+        android:id="@+id/btnConstraint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="112dp"
+        android:text="Constraint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tes_linear"
+        app:layout_constraintTop_toBottomOf="@+id/btn_help" />
+
+    <Button
+        android:id="@+id/btnTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="229dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="112dp"
+        android:text="Table"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnConstraint"
+        app:layout_constraintTop_toBottomOf="@+id/ed_input_nama" />
+
+    <Button
+        android:id="@+id/btnProtein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="16dp"
+        android:text="Protein"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConstraint" />
+
+    <Button
+        android:id="@+id/btnDutatani"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Dutatani"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,9 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProgMob_72190339">
         <activity
+            android:name=".DutaActivity"
+            android:exported="true" />
+            android:label="DUTATANI" />
+        <activity
+            android:name=".ProteinTrackerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TableActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ConstraintActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LinearActivity"
+            android:exported="true" />
+        <activity
             android:name=".HelpActivity"
             android:exported="true"
-            android:label="Help Activity"/>
+            android:label="Help Activity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

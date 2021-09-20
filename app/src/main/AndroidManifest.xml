@@ -10,8 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProgMob_72190339">
         <activity
-            android:name=".DutaActivity"
+            android:name=".SampleListView"
             android:exported="true" />
+        <activity
+            android:name=".SampleList"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DutaActivity"
+            android:exported="true"
             android:label="DUTATANI" />
         <activity
             android:name=".ProteinTrackerActivity"
@@ -32,13 +44,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Main Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="Main Activity" />
     </application>
 
 </manifest>

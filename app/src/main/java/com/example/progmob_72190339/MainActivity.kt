@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnCons : Button
     lateinit var btnTab : Button
     lateinit var btnPro : Button
-    lateinit var btnDut : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         btnCons = findViewById(R.id.btnConstraint)
         btnTab = findViewById(R.id.btnTable)
         btnPro= findViewById(R.id.btnProtein)
-        btnDut= findViewById(R.id.btnDutatani)
 
         btnInputNama.setOnClickListener(View.OnClickListener { view ->
             var strTmp = edInputNama.text.toString()
@@ -72,11 +70,6 @@ class MainActivity : AppCompatActivity() {
 
         btnPro.setOnClickListener(View.OnClickListener { view ->
             var intent = Intent (this@MainActivity, ProteinTrackerActivity::class.java)
-            startActivity(intent)
-        })
-
-        btnDut.setOnClickListener(View.OnClickListener { view ->
-            var intent = Intent (this@MainActivity, DutaActivity::class.java)
             startActivity(intent)
         })
     }

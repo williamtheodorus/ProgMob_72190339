@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import androidx.recyclerview.widget.RecyclerView
-import com.example.progmob_72190339.adapter.PetaniAdapter
 
 class SampleList : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,9 +13,11 @@ class SampleList : AppCompatActivity() {
 
         lateinit var btnList : Button
         lateinit var btnRv : Button
+        lateinit var btnCv : Button
 
         btnList = findViewById(R.id.btnShowList)
         btnRv = findViewById(R.id.btnSampleRV)
+        btnCv = findViewById(R.id.btnCV)
 
         btnList.setOnClickListener(View.OnClickListener { view ->
             var intent = Intent (this@SampleList, SampleListView::class.java)
@@ -29,5 +29,9 @@ class SampleList : AppCompatActivity() {
             startActivity(intent)
         })
 
+        btnCv.setOnClickListener(View.OnClickListener { view ->
+            var intent = Intent (this@SampleList, SampleCardView::class.java)
+            startActivity(intent)
+        })
     }
 }

@@ -33,12 +33,9 @@ class SampleListView : AppCompatActivity() {
         }
 
         spSampleList = findViewById(R.id.spSampleListView)
-        spSampleList.adapter = ArrayAdapter(this,
-            android.R.layout.simple_spinner_item, items)
-        spSampleList.onItemSelectedListener = object :
-            AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view:
-            View, position: Int, id: Long) {
+        spSampleList.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, items)
+        spSampleList.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
                 Snackbar.make(lvSample, "Anda memilih ${items[position]}", Snackbar.LENGTH_LONG).show()
             }
             override fun onNothingSelected(parent: AdapterView<*>) {

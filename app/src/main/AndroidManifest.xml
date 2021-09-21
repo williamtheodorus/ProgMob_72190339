@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProgMob_72190339">
         <activity
+            android:name=".SampleRecyclerView"
+            android:exported="true" />
+        <activity
             android:name=".SampleListView"
             android:exported="true" />
         <activity

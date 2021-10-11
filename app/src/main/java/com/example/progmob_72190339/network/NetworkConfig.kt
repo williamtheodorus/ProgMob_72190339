@@ -1,5 +1,6 @@
 package com.example.progmob_72190339.network
 
+import com.example.progmob_72190339.model.ResponsePetani
 import com.example.progmob_72190339.model.ResponseUsersItem
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -20,7 +21,7 @@ class NetworkConfig {
 
     fun getRetrofit() : Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://jsonplaceholder.typicode.com/")
+            .baseUrl("https://192.168.100.134/Slim_72190339/public/")
             .client(getInterceptor())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
@@ -30,4 +31,8 @@ class NetworkConfig {
     interface Users {
         @GET("users")
         fun getUsers(): Call<List<ResponseUsersItem>>
+
+        @GET("petani/")
+        fun getPetaniAll(): Call<ResponsePetani>
+
     }

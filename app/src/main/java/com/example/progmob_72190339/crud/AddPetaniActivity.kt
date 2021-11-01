@@ -6,9 +6,18 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.progmob_72190339.R
 import com.example.progmob_72190339.SampleListView
+import com.example.progmob_72190339.adapter.ResponsePetaniAdapter
 import com.example.progmob_72190339.model.DataItem
+import com.example.progmob_72190339.model.ResponseAddPetani
+import com.example.progmob_72190339.model.ResponsePetani
+import com.example.progmob_72190339.network.NetworkConfig
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class AddPetaniActivity : AppCompatActivity() {
     lateinit var edNama : EditText
@@ -50,8 +59,20 @@ class AddPetaniActivity : AppCompatActivity() {
             ptn.foto = edFoto.text.toString()
             ptn.id = null
 
-            var intent = Intent (this@AddPetaniActivity, GetPetaniActivity::class.java)
-            startActivity(intent)
+                NetworkConfig().getService()
+                    .addPetani(ptn)
+                    .enqueue(object : Callback<ResponseAddPetani?> {
+                        override fun onFailure(call: Call<ResponseAddPetani?>, t: Throwable) {
+                            Toast.makeText(this@AddPetaniActivity, t.localizedMessage, Toast.LENGTH_SHORT).show()
+                        }
+                        override fun onResponse(
+                            call: Call<ResponsePetani?>,
+                            response: Response<ResponsePetani?>
+                        ) {
+                            Toast.makeText(this@AddPetaniActivity, "Berhasil Tambah Data", Toast.LENGTH_SHORT).show()
+                        }
+                    })
+
         })
     }
 }

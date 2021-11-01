@@ -1,6 +1,7 @@
 package com.example.progmob_72190339.network
 
 import com.example.progmob_72190339.model.DataItem
+import com.example.progmob_72190339.model.ResponseAddPetani
 import com.example.progmob_72190339.model.ResponsePetani
 import com.example.progmob_72190339.model.ResponseUsersItem
 import okhttp3.OkHttpClient
